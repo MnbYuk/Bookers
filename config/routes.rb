@@ -4,8 +4,7 @@ Rails.application.routes.draw do
     get '/' => 'homes#top'
     get 'books' => 'books#index'
     get 'edit' => 'books#edit'
-    get 'book/:id' => 'books#show'
-    delete 'books/:id' => 'books#destroy', as: 'destroy_book'
+    get 'books/:id' => 'books#show'
     # get 'edit/:id' => 'books#edit'
     # resources :books
 
