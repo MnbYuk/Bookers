@@ -11,9 +11,11 @@
         <tr>
         <td><span><%= book.title %></span></td>
         <td><span><%= book.body %></span></td>
-        <td><span>show</span></span></td>
-        <td><span>へんすう</span></span></td>
-        <td><span>削除</span></td>
+        <td><span><%= link_to "show", book_path(book.id) %></span></td>
+        <td><span><%= link_to "edit", edit_book_path(book.id) %></span></td>
+        <td><span><%= link_to "destroy", index_book_path, method: :delete %>
+</span></td>
+
         </tr>
         <% end %>
 
