@@ -5,12 +5,14 @@ class BooksController < ApplicationController
 
   def create
     @book = Book.new(book_params)
+    @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "成功"
       redirect_to book_path(@book.id)
     else
       flash.now[:alert] = "失敗"
-      render :books
+      @books = Book.all
+      render :index
     end
   end
 
